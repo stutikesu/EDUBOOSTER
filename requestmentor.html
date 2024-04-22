@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Page</title>
+    <link rel="stylesheet" href="style8.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #6a8ed5;
+        }
+
+        h1 {
+            margin: 10px ;
+            padding-bottom: 150px;
+            font-size: 50px;
+            margin-top: 30px;
+        }
+
+        .mentor-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .mentor-info {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            width: 250px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        strong {
+            color: #007bff;
+        }
+
+        .accept-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .accept-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Mentors</h1>
+
+<div class="mentor-container">
+    <div class="mentor-info">
+        <h2>Mentor Information</h2>
+        <br>
+        <p><strong>Name:</strong> Esha Tripathi</p>
+        <br>
+        <p><strong>Expertise:</strong>Discrete Mathematics,Database Management System</p>
+        <br>
+        <p><strong>Email:</strong>Eshatripathi4321@gmail.com</p>
+        <br>
+        <button class="accept-button" onclick="acceptMentorshipRequest()">Accept Mentorship Request</button>
+    </div>
+
+    <!-- Repeat this structure for additional mentor cards -->
+    <div class="mentor-info">
+        <h2>Mentor Information</h2>
+        <br>
+        <p><strong>Name:</strong>Himanshu Diwedi</p>
+        <br>
+        <p><strong>Expertise:</strong>problem Solving,C/C++</p>
+        <br>
+        <p><strong>Email:</strong>Himashudiwedi123@gmail.com</p>
+        <br>
+        <button class="accept-button" onclick="acceptMentorshipRequest()">Accept Mentorship Request</button>
+    </div>
+
+    <div class="mentor-info">
+        <h2>Mentor Information</h2>
+        <br>
+        <p><strong>Name:</strong>Atul Agnihotri</p>
+        <br>
+        <p><strong>Expertise:</strong>Mathematics</p>
+        <br>
+        <p><strong>Email:</strong>atulagnihotri876@gmail.com</p>
+        <br>
+        <button class="accept-button" onclick="acceptMentorshipRequest()">Accept Mentorship Request</button>
+    </div>
+
+    <div class="mentor-info">
+        <h2>Mentor Information</h2>
+        <br>
+        <p><strong>Name:</strong>Ved vrat</p>
+        <br>
+        <p><strong>Expertise:</strong>Python Programming</p>
+        <br>
+        <p><strong>Email:</strong>vedvrat09@gmail.com</p>
+        <br>
+        <button class="accept-button" onclick="acceptMentorshipRequest()">Accept Mentorship Request</button>
+    </div>
+    
+</div>
+<div class="mentor-container">
+    <div class="mentor-info">
+        <h2>Mentor Information</h2>
+        <br>
+        <p><strong>Name:</strong>Dr. Manoj kumar</p>
+        <br>
+        <p><strong>Expertise:</strong> Programming,Research work</p>
+        <br>
+        <p><strong>Email:</strong>manojkumar543@gmail.com</p>
+        <br>
+        <button class="accept-button" onclick="acceptMentorshipRequest()">Accept Mentorship Request</button>
+    </div>
+
+    <!-- Repeat this structure for additional mentor cards -->
+    <div class="mentor-info">
+        <h2>Mentor Information</h2>
+        <br>
+        <p><strong>Name:</strong>Vatsya Tiwari</p>
+        <br>
+        <p><strong>Expertise:</strong>Computer organization and architecture</p>
+        <br>
+        <p><strong>Email:</strong>vatsyatiwari789@gmail.com</p>
+        <br>
+        <button class="accept-button" onclick="acceptMentorshipRequest()">Accept Mentorship Request</button>
+    </div>
+
+    <div class="mentor-info">
+        <h2>Mentor Information</h2>
+        <br>
+        <p><strong>Name:</strong>Amit Kumar Sharma</p>
+        <br>
+        <p><strong>Expertise:</strong>Data Structure,Python</p>
+        <br>
+        <p><strong>Email:</strong>amitkumar90@gmail.com</p>
+        <br>
+        <button class="accept-button" onclick="acceptMentorshipRequest()">Accept Mentorship Request</button>
+    </div>
+
+    <div class="mentor-info">
+        <h2>Mentor Information</h2>
+        <br>
+        <p><strong>Name:</strong>Ritish Dixit</p>
+        <br>
+        <p><strong>Expertise:</strong>Mechanics</p>
+        <br>
+        <p><strong>Email:</strong>riteshdixit@gmail.com</p>
+        <br>
+        <button class="accept-button" onclick="acceptMentorshipRequest()">Accept Mentorship Request</button>
+    </div>
+ 
+    
+</div>
+
+<script>
+    function acceptMentorshipRequest() {
+        alert("Mentorship request accepted!");
+    }
+</script>
+
+</body>
+</html>

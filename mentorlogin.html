@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>EDUBOOSTER</title>
+</head>
+<body>
+    <img src="https://www.makingbusinessmatter.co.uk/wp-content/uploads/2021/03/pen-and-notebook-with-word-mentor-on-a-blue-background-1024x682.jpg">
+
+    
+    <div class="container front">
+        <div class="top">
+            <span>Mentor Login</span>
+        </div>
+        <div class="form">
+            <form id="loginForm" onsubmit="login(event)">
+                <div class="inputBox inputBoxFront">
+                    <label><i class="fa-solid fa-user"></i></label>
+                    <input type="text" placeholder="Username" class="input" required>
+                </div>
+                <div class="inputBox inputBoxFront">
+                    <label><i class="fa-solid fa-lock"></i></label>
+                    <input type="password" placeholder="Password" class="input" required>
+                </div>
+                <button type="submit" class="btn">Log in</button>
+                <div class="user">New user?<span class="newUser">Sign Up</span></div>
+            </form>
+        </div> 
+    </div>
+
+    <div class="container back">
+        <div class="top topBack">
+            <span>Mentor SignUp</span>
+        </div>
+        <div class="form formBack">
+            <form id="signupForm" onsubmit="signup(event)">
+                <div class="inputBox inputBoxBack">
+                    <label><i class="fa-solid fa-user"></i></label>
+                    <input type="text" placeholder="Name" class="input" required>
+                </div>
+                <div class="inputBox inputBoxBack">
+                    <label><i class="fa-solid fa-envelope"></i></label>
+                    <input type="email" placeholder="Email-id" class="input" required>
+                </div>
+                <div class="inputBox inputBoxBack">
+                    <label><i class="fa-solid fa-user"></i></label>
+                    <input type="text" placeholder="Username" class="input" required>
+                </div>
+                <div class="inputBox inputBoxBack">
+                    <label><i class="fa-solid fa-lock"></i></label>
+                    <input type="password" placeholder="Password" class="input" required>
+                </div>
+                <button type="submit" class="btn btnBack">Sign Up</button>
+                <div class="user userBack">Existing user?<span class="existingUser">Log in</span></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let front = document.querySelector('.front');
+        let back = document.querySelector('.back');
+
+        let newUser = document.querySelector('.newUser');
+        let existingUser = document.querySelector('.existingUser');
+
+        newUser.addEventListener('click', function () {
+            front.style.zIndex = "1"
+            back.style.zIndex = "2"
+            front.style.transform = "rotateY(360deg)"
+            back.style.transform = "rotateY(0deg)"
+        })
+
+        existingUser.addEventListener('click', function () {
+            back.style.zIndex = "1"
+            front.style.zIndex = "2"
+            back.style.transform = "rotateY(180deg)"
+            front.style.transform = "rotateY(0deg)"
+        })
+
+        function signup(event) {
+            event.preventDefault();
+            const name = document.querySelector('.inputBoxBack:nth-child(1) input').value;
+            const email = document.querySelector('.inputBoxBack:nth-child(2) input').value;
+            const username = document.querySelector('.inputBoxBack:nth-child(3) input').value;
+            const password = document.querySelector('.inputBoxBack:nth-child(4) input').value;
+
+            // Retrieve existing mentors from localStorage
+            const mentors = JSON.parse(localStorage.getItem('mentors')) || [];
+
+            // Check if the username is already taken
+            const isUsernameTaken = mentors.some(mentor => mentor.username === username);
+
+            if (isUsernameTaken) {
+                alert('Username is already taken. Please choose a different username.');
+            } else {
+                // Add the new mentor to the array
+                mentors.push({ name, email, username, password });
+
+                // Save the updated mentor array back to localStorage
+                localStorage.setItem('mentors', JSON.stringify(mentors));
+
+                alert('Signup successful! You can now log in.');
+            }
+        }
+
+        function login(event) {
+            event.preventDefault();
+            const username = document.querySelector('.inputBoxFront:nth-child(1) input').value;
+            const password = document.querySelector('.inputBoxFront:nth-child(2) input').value;
+
+            // Retrieve mentor data from localStorage
+            const mentors = JSON.parse(localStorage.getItem('mentors')) || [];
+
+            const mentor = mentors.find(m => m.username === username && m.password === password);
+
+            if (mentor) {
+                alert('Login successful!');
+                // Redirect to the desired page after successful login
+                window.location.href = 'StudentRequest.html';
+            } else {
+                alert('Invalid credentials. Please check your username and password.');
+            }
+        }
+    </script>
+</body>
+</html>

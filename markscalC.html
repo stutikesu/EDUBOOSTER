@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url("https://thumbs.dreamstime.com/b/calculation-data-financial-investment-market-white-glyph-icon-colorful-circle-background-vector-eps-abstract-template-145353679.jpg");
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 140px;
+            color:rgb(17, 63, 92);
+            font-family: cursive;
+        }
+h3{
+    text-align: center;
+    color: rgb(18, 81, 96);
+}
+        .calculator-container {
+            max-width: 580px;
+            border-radius: 60vh;
+            margin: 0 auto;
+            height: 420px;
+            margin-top: 60px;
+            background-color:white;
+            
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 360px;
+            padding: 8px;
+            box-sizing: border-box;
+           margin-left:120px ;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: rgb(8, 6, 6);
+            border: none;
+            cursor: pointer;
+            margin-left: 268px;
+            font-weight: bolder;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        #mentorshipButton {
+            padding: 10px;
+            background-color: #3498db;
+            color: rgb(30, 23, 23);
+            border: none;
+            cursor: pointer;
+            font-weight: bolder;
+            margin-top: 20px;
+            margin-left:225px ;
+        }
+    </style>
+    <title>Percentage and CGPA Calculator</title>
+</head>
+<body>
+    
+    <h1>Percentage and CGPA Calculator</h1>
+    <div class="calculator-container">
+        <div class="input-group">
+            <label for="numSubjects"><h3>Number of Subjects:</h3></label>
+            <input type="number" id="numSubjects" min="1" required>
+        </div>
+
+        <div class="input-group">
+            <label for="totalMarks"><h3>Total Marks per Subject:</h3></label>
+            <input type="number" id="totalMarks" min="1" required>
+        </div>
+
+        <div class="input-group">
+            <label for="marksObtained"><h3>Marks Obtained in Each Subject:</h3></label>
+            <input type="text" id="marksObtained" placeholder="Enter comma-separated marks" required>
+        </div>
+
+        <button onclick="calculateResult()">Calculate</button>
+
+        <div id="result"></div>
+
+        <button id="mentorshipButton" onclick="requestMentorship()">Request for Mentorship</button>
+    </div>
+
+    <script>
+        function calculateResult() {
+            const numSubjects = parseInt(document.getElementById('numSubjects').value);
+            const totalMarks = parseInt(document.getElementById('totalMarks').value);
+            const marksObtainedInput = document.getElementById('marksObtained').value;
+
+            // Convert the comma-separated string to an array of integers
+            const marksArray = marksObtainedInput.split(',').map(mark => parseInt(mark.trim()));
+
+            // Check if the array length matches the number of subjects
+            if (marksArray.length === numSubjects) {
+                const totalObtainedMarks = marksArray.reduce((acc, mark) => acc + mark, 0);
+                const totalPossibleMarks = numSubjects * totalMarks;
+                const percentage = (totalObtainedMarks / totalPossibleMarks) * 100;
+                const cgpa = (percentage / 9.5).toFixed(2);
+
+                const resultMessage = `
+                    <p><strong>Total Obtained Marks:</strong> ${totalObtainedMarks}</p>
+                    <p><strong>Total Possible Marks:</strong> ${totalPossibleMarks}</p>
+                    <p><strong>Percentage:</strong> ${percentage.toFixed(2)}%</p>
+                    <p><strong>CGPA:</strong> ${cgpa}</p>
+                `;
+
+                document.getElementById('result').innerHTML = resultMessage;
+            } else {
+                alert('Number of subjects and entered marks do not match.');
+            }
+        }
+
+        function requestMentorship() {
+            alert('Mentorship requested!');
+            // Add logic to handle the mentorship request, e.g., redirect to a mentorship request page
+            window.location.href = 'mentorlist.html';
+        }
+    </script>
+</body>
+</html>

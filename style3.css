@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    background-image: linear-gradient(to bottom right, rgb(115, 206, 226),rgb(37, 37, 160));
+    
+}
+
+.nav{
+    width: 100%;
+    height: auto;
+    color: white;
+    position: fixed;
+    z-index: 999999;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 400px;
+    align-items: center;
+    padding: 3rem 2rem;
+
+    
+}
+
+header h1{
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 500px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+ul :hover{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ .form-fill {
+    padding: 50px;
+ }
+ .form-fill h1{
+    padding-left: 100px;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+ }
+ .form-fill p{
+    margin-top: 50px;
+    margin-left: 85px;
+    font-size: 1em;
+ }
+
+ .form-fill input{
+    margin-left: 85px;
+    width: 50%;
+    height: 35px;
+    border-radius: 5px 5px 4px;
+    text-decoration: none;
+    border: none;
+    
+ }
+.namei input{
+    height: 200px;
+    padding-bottom: 150px;
+    box-shadow: rgb(34, 32, 32) 3px 3px 6px 0px inset,
+    rgba(221,220,220,0.5) -3px -3px 6px 1px inset;
+ }
+ .form-fill .btn{
+    margin-left: 150px;
+    position: relative;
+    display: inline-block;
+    padding: 20px 50px;
+    background: #fff;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.25s;
+ }
+ .btn:hover{
+    letter-spacing: 2px;
+}
+input{
+    font-style: italic;
+    padding-left: 10px;
+    box-shadow: rgb(88, 83, 83) 3px 3px 6px 0px inset,
+    rgba(221,220,220,0.5) -3px -3px 6px 1px inset;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+   /* padding: 30px 1000px;*/
+   padding-left: 800px;
+   padding-bottom: 300px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.sci{
+    display: flex;
+}
+
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    color: black;
+    font-size: 3.5em;
+    margin-right: 20px;
+    display: inline-block;
+    transition: 0.25s;
+}
+
+.sci li a:hover{
+    transform: translate(-5px);
+}

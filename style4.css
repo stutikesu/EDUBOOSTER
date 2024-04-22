@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: url("");
+    background-image: linear-gradient(to bottom right,rgb(215, 215, 235), blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+}
+
+.title{
+    color: black;
+    font-size: 50px;
+    padding-bottom: 600px;
+    font-weight: 700;
+    text-shadow: 2px 3px 4px rgba(1, 22, 27, 0.717);
+}
+
+.container{
+    width: 50vh;
+    height: 60vh;
+    border-radius: 3vh;
+    background: rgba(79, 146, 163, 0.813);
+     backdrop-filter: blur(20px);
+    box-shadow: 10px 10px 20px rgba(0,0, 0, 0.2) , 10px 10px 20px rgba(0,0, 0, 0.2) ;
+}
+
+.top{
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.top span{
+    position: relative;
+    top: 3vh;
+    font-size: 25px;
+    letter-spacing: 0.2vh;
+    font-weight: 700;
+    color: #204487;
+    text-shadow: 1px 1px 1px rgb(206, 223, 230);
+}
+
+.inputBox{
+    box-shadow: rgb(219,219,219) 3px 3px 6px 0px inset,
+    rgba(221,220,220,0.5) -3px -3px 6px 1px inset;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 4.5vh;
+    width: 40vh;
+    height: 6vh;
+    margin-bottom: 4vh;
+    border-radius: 5vh;
+}
+
+.inputBox:focus-within{
+    box-shadow: 10px 10px 20px rgba(0,0, 0, 0.1),
+    -5px -5px 10px rgba(255,255,255,0.5);
+    outline: 0.5vh solid #264653a1;
+}
+
+.input{
+    height: 4vh;
+    width: 30vh;
+    margin-left: -2vh;
+    border: none;
+    outline: none;
+    background: inherit;
+}
+
+.btn{
+    margin-top: 2vh;
+    height: 5vh;
+    width: 10vh;
+    border: none;
+    border-radius: 5vh;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #264653;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: rgba(0,0, 0, 0.18) 0px 2px 4px;
+}
+
+.btn:hover{
+    background: #264653;
+    color: white;
+}
+
+form{
+    text-align: center;
+}
+
+.user{
+    margin-top: 3vh;
+    color: #fff;
+}
+
+.user span{
+    margin-left: 1vh;
+    font-size: 20px;
+    font-weight: bold;
+    color:blue;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+
+
+
+.inputBoxBack{
+    height: 6vh;
+    margin-bottom: 2vh;
+}
+.topBack{
+    margin-bottom: 6vh;
+
+}
+.btnBack{
+    margin-top: 0vh;
+    height: 5vh;
+    width: 10vh;
+    font-size: 2vh;
+}
+.front{
+    position: absolute;
+    z-index: 2;
+    transition: 0.8s ease;
+}
+.back{
+    position: absolute;
+    transition: 0.8 ease;
+    z-index: 1;
+    transform: rotate(180deg);
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: rgb(106, 179, 193);
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bolder;
+            color: white;
+            font-style: oblique;
+        }
+
+        .mentor-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .mentor {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9ef;
+        }
+
+        .mentor h2 {
+            margin-bottom: 10px;
+            color: #0f3566;
+        }
+
+        .mentor p {
+            margin: 0;
+        }
+
+        .btn-send-request, .btn-whatsapp {
+            padding: 8px 12px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .btn-send-request {
+            background-color: #3498db;
+            color: white;
+            border: none;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            border: none;
+        }
+    </style>
+    <title>Mentor List</title>
+</head>
+<body>
+    <h1>Mentor List</h1>
+
+    <div class="mentor-list">
+        <div class="mentor">
+            <h2>Esha Tripathi</h2>
+            <p><strong>Skills:</strong>Set theory, Logic and propositional logic,Graph theory</p>
+            <br>
+            <p><strong>Domain:</strong> Descrete Mathematics</p>
+            <br>
+            <p><strong>Qualifications:</strong> Doctor of Philosophy.</p>
+            <br>
+            <p><strong>Phone Number:</strong> 8756774553</p>
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('Esha Tripathi Mam')">Send Request</button> -->
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('+918756774553', 'Esha Tripathi Mam')">Send Request</button>
+        </div>
+
+        <div class="mentor">
+            <h2>Himanshu Diwedi</h2>
+            <p><strong>Skills:</strong> Data Science, C++, Java</p>
+            <br>
+            <p><strong>Domain:</strong> Data Structure and problem solving</p>
+            <br>
+            <p><strong>Qualifications:</strong> Master's in Data Science, Kaggle Grandmaster</p>
+            <br>
+            <p><strong>Phone Number:</strong> 9634013405</p>
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('Himanshu Diwedi Sir')">Send Request</button> -->
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9634013405', 'Himanshu Diwedi Sir')">Send Request</button>
+        </div>
+
+        <div class="mentor">
+            <h2>Amit Kumar Sharma</h2>
+            <br>
+            <p><strong>Skills:</strong> Data Structures and Algorithm, C++, Java,C</p>
+            <br>
+            <p><strong>Domain:</strong> Data Structure and Algorithm</p>
+            <br>
+            <p><strong>Qualifications:</strong> Master's in Data Science, Kaggle Grandmaster</p>
+            <br>
+            <p><strong>Phone Number:</strong> 7897048878</p>
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('Amit Kumar Sharma Sir')">Send Request</button> -->
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('7897048878', 'Amit Kumar Sharma Sir')">Send Request</button>
+        </div>
+        <!-- <div class="mentor">
+              <h2>Ved Vrat</h2> 
+              <br>
+            <p><strong>Skills:</strong> Python, GUI In Python, Data Structures</p>
+            <br>
+            <p><strong>Domain:</strong> Python Programming</p>
+            <br>
+            <p><strong>Qualifications:</strong> Master's in Data Science, Python </p>
+            <br>
+            <p><strong>Phone Number:</strong> 9598393055</p>
+            <br>
+           <button class="btn-send-request" onclick="sendRequest('Ved vrat Sir')">Send Request</button
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9598393055', 'Ved vrat Sir')">Send Request</button>
+        </div>-->
+        <div class="mentor">
+            <h2> Dr S.S Parihar</h2>
+            <br>
+            <p><strong>Skills:</strong>HTML,CSS,Javascript,React</p>
+            <br>
+            <p><strong>Domain:</strong> Front End Development</p>
+            <br>
+            <p><strong>Qualifications:</strong> Master's in Web Development, Kaggle Grandmaster</p>
+            <br>
+            <p><strong>Phone Number:</strong> 7007340827</p>
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('S.S Parihar Sir')">Send Request</button> -->
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('7007340827', 'S.S Parihar Sir')">Send Request</button>
+        </div>
+        <div class="mentor">
+            <h2>Arunendra Singh</h2>
+            <br>
+            <p><strong>Skills:</strong> Javascript,React,Angular,Nodejs</p>
+            <br>
+            <p><strong>Domain:</strong> Full Stack Developer</p>
+            <br>
+            <p><strong>Qualifications:</strong> Master's in Full Stack Web Development</p>
+            <br>
+            <p><strong>Phone Number:</strong>9956420332</p>
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('Arunendra Singh Sir')">Send Request</button> -->
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9956420332', 'Arunendra Singh Sir')">Send Request</button>
+        </div>
+        <div class="mentor">
+            <h2>Atul Agnihotri</h2>
+            <br>
+            <p><strong>Skills:</strong> Engineering Mathematics,Statistics</p>
+            <br>
+            <p><strong>Domain:</strong> Engineerings Maths</p>
+            <br>
+            <p><strong>Qualifications:</strong> Bachelors in Information Technology</p>
+            <br>
+            <p><strong>Phone Number:</strong>9918755556</p>
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('Atul Agnihotri Sir')">Send Request</button> -->
+            
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9918755556', 'Atul Agnihotri Sir')">Send Request</button>
+        </div>
+        <div class="mentor">
+            <h2>Sumiti Narayan Tiwari</h2>
+            <br>
+            <p><strong>Skills:</strong> Quantum Physics, Research Papers</p>
+            <br>
+            <p><strong>Domain:</strong> Engineering Physics and Research</p>
+            <br>
+            <p><strong>Qualifications:</strong> Master's in Quantum Physics</p>
+            <br>
+            <p><strong>Phone Number:</strong>9554861574</p>
+
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('Sumiti Narayan Sir')">Send Request</button> -->
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9554861574', 'Sumiti Narayan Sir')">Send Request</button>
+        </div>
+        <div class="mentor">
+            <h2>Ritesh Dixit</h2>
+            <br>
+            <p><strong>Skills:</strong> Quantum Mechanics, Workshop Management</p>
+            <br>
+            <p><strong>Domain:</strong>Engineering Mechanics</p>
+            <br>
+            <p><strong>Qualifications:</strong> Master's in Information Technology</p>
+            <br>
+            <p><strong>Phone Number:</strong>9453598780</p>
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('Ritesh Dixit Sir')">Send Request</button> -->
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9453598780', 'Ritesh Dixit Sir')">Send Request</button>
+        </div>
+        <div class="mentor">
+            <h2>Dr. Manoj Kumar </h2>
+            <br>
+            <p><strong>Skills:</strong> C, C++, Java,AI</p>
+            <br>
+            <p><strong>Domain:</strong> Data Structure and problem solving,Research Papers</p>
+            <br>
+            <p><strong>Qualifications:</strong> Bachelors of Technology and Masters of Technology</p>
+            <br>
+            <p><strong>Phone Number:</strong>9473780367</p>
+            <br>
+            <!-- <button class="btn-send-request" onclick="sendRequest('Manoj Sir')">Send Request</button> -->
+            <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9473780367', 'Manoj Sir')">Send Request</button>
+        </div>
+       
+        <!-- Add more mentors as needed -->
+    </div>
+
+    <script>
+        function sendRequest(mentorName) {
+            // Add logic to handle sending mentorship request to the selected mentor
+            alert(`Request sent to ${mentorName}!`);
+            // You can redirect to a mentorship request page or perform other actions as needed
+        }
+
+        function sendWhatsAppRequest(phoneNumber, mentorName) {
+            // Construct the WhatsApp message with mentor's name
+            const message = encodeURIComponent(`Hello ${mentorName}, I am interested in mentorship. Can we discuss further?`);
+
+            // Create the WhatsApp link
+            const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet"href="style9.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="requestmentor.html">Mentors</a> |
+        <a href="#">Students</a> |
+        <a href="https://www.studyguideindia.com/Colleges/default.asp?State=UP">Colleges</a>
+    </nav>
+    <section>
+        <h2>Login Requests</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample login request for a student -->
+                <tr>
+                    <td>1</td>
+                    <td>xyz</td>
+                    <td>xyz@example.com</td>
+                    <td>Student</td>
+                    <td>
+                        <button class="button accept">Accept</button>
+                        <button class="button decline">Decline</button>
+                    </td>
+                </tr>
+                <!-- Sample login request for a mentor -->
+                <tr>
+                    <td>2</td>
+                    <td>xys</td>
+                    <td>xys@example.com</td>
+                    <td>Mentor</td>
+                    <td>
+                        <button class="button accept">Accept</button>
+                        <button class="button decline">Decline</button>
+                    </td>
+                </tr>
+                <!-- Repeat similar rows for other login requests -->
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>User Management</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample user (student) -->
+                <tr>
+                    <td>3</td>
+                    <td>abc</td>
+                    <td>abc@example.com</td>
+                    <td>Student</td>
+                    <td>
+                        <button class="button delete">Delete</button>
+                        <button class="button block">Block</button>
+                    </td>
+                </tr>
+                <!-- Sample user (mentor) -->
+                <tr>
+                    <td>4</td>
+                    <td>efg</td>
+                    <td>efg@example.com</td>
+                    <td>Mentor</td>
+                    <td>
+                        <button class="button delete">Delete</button>
+                        <button class="button block">Block</button>
+                    </td>
+                </tr>
+                <!-- Repeat similar rows for other users -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        // Sample JavaScript for handling button clicks
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('accept')) {
+                // Handle accept action
+                console.log('Accept clicked');
+            } else if (event.target.classList.contains('decline')) {
+                // Handle decline action
+                console.log('Decline clicked');
+            } else if (event.target.classList.contains('delete')) {
+                // Handle delete action
+                console.log('Delete clicked');
+            } else if (event.target.classList.contains('block')) {
+                // Handle block action
+                console.log('Block clicked');
+            }
+        });
+    </script>
+</body>
+</html>

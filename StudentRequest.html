@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: rgb(126, 195, 221);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-style:oblique ;
+        }
+
+        .request-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .request {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .request h2 {
+            margin-bottom: 10px;
+            color: rgb(39, 84, 129);
+        }
+
+        .request p {
+            margin: 0;
+        }
+
+        .btn-accept, .btn-decline {
+            padding: 8px 12px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .btn-accept {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .btn-decline {
+            background-color: #f44336;
+            color: white;
+            border: none;
+        }
+        .btn-whatsapp{
+            background-color: #9feaa2;
+            height: 30px;
+            color: #360e0e;
+        }
+    </style>
+    <title>Student Mentorship Requests</title>
+</head>
+<body>
+    <h1>Student Mentorship Requests</h1>
+
+    <div class="request-container">
+        <div class="request">
+            <h2>Tanveer Hussain Khan</h2>
+            <br>
+            <p><strong>Email:</strong>Tanveerhussainkhan@gmail.com</p>
+            <br>
+            <p><strong>Subject:</strong> Computer Science</p>
+            <br>
+            <p><strong>Mentor:</strong>Himanshu Diwedi</p>
+            <br>
+            <p><strong>Message:</strong> I am looking for a mentor to guide me in my studies and projects.</p>
+            <br>
+            <button class="btn-accept" onclick="acceptRequest('mentorTimings.html', 'Tanveerhussainkhan@gmail.com')">Accept</button>
+            <button class="btn-decline" onclick="declineRequest()">Decline</button>
+            <!-- <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9653030160', 'Tanveer Hussain khan')">WhatsApp</button> -->
+
+        </div>
+
+        <div class="request">
+            <h2>Stuti Kesarwani</h2>
+            <br>
+            <p><strong>Email:</strong> stutikesarwani123@gmail.com</p>
+            <br>
+            <p><strong>Subject:</strong> Mathematics</p>
+            <br>
+            <p><strong>Mentor:</strong>Atul Agnihotri</p>
+            <br>
+            <p><strong>Message:</strong> I need assistance with advanced calculus and linear algebra.</p>
+            <br>
+            <button class="btn-accept" onclick="acceptRequest('mentorTimings.html', ' stutikesarwani123@gmail.com')">Accept</button>
+            <button class="btn-decline" onclick="declineRequest()">Decline</button>
+            <!-- <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9653052697', 'Stuti Kesarwani')">WhatsApp</button> -->
+        </div>
+
+        <div class="request">
+            <h2>Shivansh Tiwari</h2>
+            <br>
+            <p><strong>Email:</strong>shivansh@gmail.com</p>
+            <br>
+            <p><strong>Subject:</strong> Physics</p>
+            <br>
+            <p><strong>Mentor:</strong>Sumiti Narayan</p>
+            <br>
+            <p><strong>Message:</strong> Seeking guidance on experimental physics and research projects.</p>
+            <br>
+            <button class="btn-accept" onclick="acceptRequest('mentorTimings.html', 'shivansh@gmail.com')">Accept</button>
+            <button class="btn-decline" onclick="declineRequest()">Decline</button>
+            <!-- <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9653031234', 'Shivansh Tiwari')">WhatsApp</button> -->
+        </div>
+        <div class="request">
+            <h2>Siddhart Singh</h2>
+            <br>
+            <p><strong>Email:</strong>siddhartsingh12@gmail.com</p>
+
+            <br>
+            <p><strong>Subject:</strong>C language</p>
+            <br>
+            <p><strong>Mentor:</strong>Dr. Manoj Kumar</p>
+            <br>
+            <p><strong>Message:</strong> Seeking guidance on C language basics.</p>
+              <br>
+            <button class="btn-accept" onclick="acceptRequest('mentorTimings.html', 'siddhartsingh12@gmail.com')">Accept</button>
+            <button class="btn-decline" onclick="declineRequest()">Decline</button>
+            <!-- <button class="btn-whatsapp" onclick="sendWhatsAppRequest('8101481880', 'Siddhart Singh')">WhatsApp</button> -->
+        </div>
+
+        <div class="request">
+            <h2>Ayush Srivastava</h2>
+            <br>
+            <p><strong>Email:</strong>ayushsrivastava@gmail.com</p>
+            <br>
+            <p><strong>Subject:</strong>Web Development</p>
+            <br>
+            <p><strong>Mentor:</strong>Dr. S.S Parihar</p>
+            <br>
+            <p><strong>Message:</strong>Want to clear my concept regarding back-end Developmentof web Development</p>
+            <br>
+            <button class="btn-accept" onclick="acceptRequest('mentorTimings.html', 'ayushsrivastava@gmail.com')">Accept</button>
+            <button class="btn-decline" onclick="declineRequest()">Decline</button>
+            <!-- <button class="btn-whatsapp" onclick="sendWhatsAppRequest('7080837404', 'Ayush Srivastava')">WhatsApp</button> -->
+        </div>
+        <div class="request">
+            <h2>Yashna Singh</h2>
+            <br>
+            <p><strong>Email:</strong>yashnasingh432@gmail.com</p>
+            <br>
+            <p><strong>Subject:</strong>Discrete Mathematics</p>
+            <br>
+            <p><strong>Mentor:</strong>Prof. Esha Tripathi</p>
+
+            <br>
+            <p><strong>Message:</strong> I want to learn how to solve graph problems.</p>
+            <br>
+            <button class="btn-accept" onclick="acceptRequest('mentorTimings.html', 'yashnasingh432@gmail.com')">Accept</button>
+            <button class="btn-decline" onclick="declineRequest()">Decline</button>
+            <!-- <button class="btn-whatsapp" onclick="sendWhatsAppRequest('9818822894', 'Yashna Singh')">WhatsApp</button> -->
+        </div>
+        <div class="request">
+            <h2>Yash Trivedi</h2>
+            <br>
+            <p><strong>Email:</strong>yashtrivedi567@gmail.com</p>
+            <br>
+            <p><strong>Subject:</strong> Python</p>
+            <br>
+            <p><strong>Mentor:</strong>Ved Vrat</p>
+            <br>
+            <p><strong>Message:</strong>I have doubts in few python questions in their approach.</p>
+            <br>
+            <button class="btn-accept" onclick="acceptRequest('mentorTimings.html', 'yashtrivedi567@gmail.com')">Accept</button>
+            <button class="btn-decline" onclick="declineRequest()">Decline</button>
+            <!-- <button class="btn-whatsapp" onclick="sendWhatsAppRequest('8630094404', 'Yash Trivedi')">WhatsApp</button> -->
+        </div>
+    </div>
+
+    <script>
+        function acceptRequest(nextPage, userEmail) {
+            // Add logic to handle accepting the mentorship request
+
+             
+
+
+
+            // Check if the browser supports notifications
+            if (!("Notification" in window)) {
+                alert("This browser does not support desktop notification");
+            }
+
+            // Check if the user has granted permission to show notifications
+            else if (Notification.permission === "granted") {
+                // Create a notification
+                const notification = new Notification("Request Accepted", {
+                    body: `Your mentorship request has been accepted. Check your email for further details.`,
+                });
+
+                // Redirect to the desired page
+                window.location.href = nextPage;
+            }
+
+            // If the user has not yet granted permission, ask for permission
+            else if (Notification.permission !== "denied") {
+                Notification.requestPermission().then(function (permission) {
+                    if (permission === "granted") {
+                        // Create a notification
+                        const notification = new Notification("Request Accepted", {
+                            body: `Your mentorship request has been accepted. Check your email for further details.`,
+                        });
+
+                        // Redirect to the desired page
+                        window.location.href = nextPage;
+                    }
+                });
+            }
+        }
+
+        function declineRequest() {
+            // Add logic to handle declining the mentorship request
+            alert('Request declined!');
+        }
+        
+        function sendWhatsAppRequest(phoneNumber, mentorName) {
+            // Construct the WhatsApp message with mentor's name
+            const message = encodeURIComponent(`Hello ${mentorName},Feel free to share any academic concerns or doubts with me. I'm here to help you navigate challenges and ensure your success.`);
+
+            // Create the WhatsApp link
+            const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappLink, '_blank');
+        }
+   
+
+    </script>
+</body>
+</html>
